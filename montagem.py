@@ -1,3 +1,5 @@
+from robo import Robozinho
+
 robos = []
 
 def add_robos(nome, poder, energia):
@@ -5,10 +7,6 @@ def add_robos(nome, poder, energia):
 
 def listar_robos():
     return robos
-
-def excluir_robos(indice):
-    if 0 <= indice < len(robos):
-        robos.pop(indice)
 
 def editar_robos(indice, novo_nome=None, novo_poder=None, nova_energia=None):
     if 0 <= indice < len(robos):
@@ -18,3 +16,9 @@ def editar_robos(indice, novo_nome=None, novo_poder=None, nova_energia=None):
             robos[indice]["poder"] = novo_poder
         if nova_energia is not None:
             robos[indice]["energia"] = nova_energia
+     
+
+def excluir_robos(indice):
+    if 0 <= indice < len(robos):
+        robos.pop(indice)
+       
