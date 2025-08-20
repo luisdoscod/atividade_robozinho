@@ -13,3 +13,9 @@ def listar_robos():
             texto = f"nome: {r.nome}, poder: {r.poder}, energia: {r.energia}"
             nova_lista.append(texto)
         return nova_lista
+
+def excluir_robos(index):
+       if 0 <= index < len(robos):
+        return robos.pop(index)
+       else: 
+        return None
